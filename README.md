@@ -6,14 +6,13 @@ See a detailed walk-through of this sample app on the [Express Quickstart](https
 
 ## Running This Sample Locally
 
-1. Install the dependencies with npm:
+### 1. Install the dependencies with npm:
 
 ```bash
 npm install
 ```
 
-
-2. Rename `.env.example` to `.env` and replace or check the following values. 
+### 2. Rename `.env.example` to `.env` and replace or check the following values. 
 
 > ⚠️ Note: If you downloaded this sample app directly from Auth0 Manage Dashboard, or from Auth0 Docs _and_ you chose the Auth0 application you're creating this sample for, then you can check these are configured already: 
 
@@ -25,7 +24,33 @@ npm install
 mv .env.example .env
 ```
 
-3. Run the sample app:
+### 3. To run the sample follow these steps:
+
+- Set the Allowed Callback URLs in the Application Settings to:
+```
+http://localhost:3000/callback
+```
+
+- Set the Allowed Logout URLs in the Application Settings to:
+```
+http://localhost:3000
+```
+
+- Make sure Node.JS LTS is installed and execute the following commands in the sample's directory:
+```bash
+npm install
+npm start
+```
+
+- You can also run it from a Docker image with the following commands:
+```bash
+# In Linux / macOS
+sh exec.sh
+# In Windows' Powershell
+./exec.ps1
+```
+
+### 4. Run the sample app:
 
 ```bash
 npm start
